@@ -4,4 +4,4 @@ def simpleArraySum(ar):
         total = total + i
     return(total)
 
-print(simpleArraySum([1,2,3,4,10,11]))
+print(simpleArraySum([1,2,3,4,10,11]))  
