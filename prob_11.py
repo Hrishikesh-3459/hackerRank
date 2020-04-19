@@ -1,20 +1,13 @@
 def countApplesAndOranges(s, t, a, b, apples, oranges):
-    house = []
-    apples_in_house = 0
-    oranges_in_house = 0
-    for i in range(s,t+1):
-        house.append(i)
-    for i in range(len(apples)):
-        apples[i] += a
-    for i in range(len(oranges)):
-        oranges[i] += b
-    for i in apples:
-        if(i in house):
-            apples_in_house += 1
-    for i in oranges:
-        if(i in house):
-            oranges_in_house += 1
-    print(apples_in_house)
-    print(oranges_in_house)
+    li_ap = []
+    li_or = []
+    for x in apples:
+        if((x+a) >= s and (x+a) <= t):
+            li_ap.append(1)
+    for j in oranges:
+        if((j+b) >= s and (j+b) <= t):
+            li_or.append(1)
+    print(sum(li_ap))
+    print(sum(li_or))
 
 countApplesAndOranges(7,10,4,12,[2,3,-4],[3,-2,-4])
