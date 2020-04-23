@@ -12,3 +12,4 @@ def migratoryBirds(arr):
 
 print(migratoryBirds([2,2,1,1]))
 
+# Taking a long time to run, hence two input tests are not completed
