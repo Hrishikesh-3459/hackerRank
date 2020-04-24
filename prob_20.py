@@ -4,9 +4,11 @@ def sockMerchant(n, ar):
     for i in range(n):
         if(ar[i] not in colours):
             colours.append(ar[i])
+            print(colours)
         else:
             pair += 1
             colours.remove(ar[i])
+            print(colours)
     return(pair)
 
 
