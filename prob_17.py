@@ -13,3 +13,10 @@ def migratoryBirds(arr):
 print(migratoryBirds([2,2,1,1]))
 
 # Taking a long time to run, hence two input tests are not completed
+
+# count = [0]*6
+#     for t in arr:
+#         count[t] += 1
+#     return((count.index(max(count))))
+
+# This is the submitted answer
