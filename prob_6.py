@@ -6,4 +6,4 @@ def staircase(n):
             print("*", end = "")
         print()
 
-staircase(1)
+staircase(5)
