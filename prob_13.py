@@ -1,19 +1,17 @@
 def getTotalX(a, b):    
     ans = 0
-    factors=[]
-    for num in b:
-        for i in range(1,num+1):
-            if num%i==0:
-                factors.append(i)
-    factors.remove(1)
-    com = set(factors)
-    for i in com:
+    for i in range(1,min(b)+1):
+        f1 = 0
+        f2 = 0
         for j in a:
-            if(i % j != 0):
-                break
-            else:
-                ans += 1
-            
-    print(ans)
+            if (i%j != 0):
+                f1 += 1
+        for k in b:
+            if (k%i != 0):
+                f2 += 1
+        if (f1 == 0 and f2 == 0):
+            ans += 1
+
+    return(ans)
 
 getTotalX([3,4], [24,48])
