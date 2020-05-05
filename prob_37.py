@@ -1,25 +1,22 @@
 def jumpingOnClouds(c, k):
     n = len(c)
-    health = 100
-    if (c[0] == 1):
-        health -= 2
-    i = 0
-    while True:
-        health -= 1
-        if (c[(i + k) % n] == 1):
-            health -= 2
-        i += 1
-        if(c.index(c[(i + k) % n]) == 0):
-            break
+    energy = 100
+    if (k < len(c)):
+        if (c[k] == 1):
+            energy -= 3
+        elif (c[k] == 0):
+            energy -= 1
+    i = k
+    while (i != 0):
+        i = (i+k) % n
+        if (c[i] == 1):
+            energy -= 3
+        elif (c[i] == 0):
+            energy -= 1
+    return(energy)
 
         
-        
 
-    # for i in range(0,n,k):
-    #     health -= 1
-    #     if (c[(i + k) % n] == 1):
-    #         health -= 2
-    return(health)
 
 
 print(jumpingOnClouds([1,1,1,0,1,1,0,0,0,0], 3))
